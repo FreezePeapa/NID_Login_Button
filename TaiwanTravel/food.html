@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAIWAN TRAVEL</title>
+    </head>
+
+    <body>
+        
+        <div class="bg">
+            <img src="image/banner02 (1).jpg" alt="背景圖片">
+        </div>
+
+        <div class="backT">
+            <img src="image/taiwan_logo_black (1).svg" alt="背景台灣">
+        </div>    
+
+        <div class="menu">
+
+            <!--<input type ="button" onclick="history.back()" value="上一頁"></input>-->      
+            <input type="button" value="旅遊情報" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="景點查詢" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="美食推薦" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="旅宿資訊" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="節慶活動" class="btn" onclick="location.href='food.html'" />
+    
+            <input type="button" value="TAIWAN TRAVEL" class="twTR" onclick="location.href='index.html'" />    
+           
+        </div>
+        
+    </body>
+    <style>
+
+        .bg img{
+            position: fixed;
+
+            top: 0px;
+            left: 0px;
+            width: 1440px;
+            opacity: 0.36;
+            
+            background: transparent linear-gradient(0deg, #FFFFFFF5 0%, #FFFFFF96 100%) 0% 0% no-repeat padding-box;
+            
+            z-index: -999;/*指定階層要在哪裡，數字越大越上層，反之則在越下層。*/
+        }
+
+        .backT img{
+
+            position: fixed;
+            top: 251px;
+            left: 428px;
+            width: 584px;
+            height: 399px;
+            background: transparent 0% 0% no-repeat padding-box;
+            opacity: 1;
+          
+        }  
+
+        .btn:hover{
+            cursor: pointer;
+            
+            border-radius: 15px;
+
+            background-color: rgba(190, 181, 186, 0.425); 
+        }       
+        .btn{
+
+            color: #666;
+            background-color: transparent;
+            border: none;
+
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            font-size: 14px;
+            font-weight: bold;
+
+            top: 33px;
+            left: 976px;
+            width: 76px;
+            height: 25px;
+            text-align: left;
+
+            letter-spacing: 1.26px;
+
+        }
+        .menu{   
+          
+            display: flex;/*宣告使用flex排版*/
+
+            height: 20px;
+            padding: 10px;
+            flex-direction: row ;
+
+            position: fixed; 
+            
+            right: 100px;
+
+        }
+
+        .twTR{
+            color:#666;
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            font-size: 22px;
+
+            border: none;
+            background-color: transparent;
+
+            position: fixed; 
+
+            top: 31px;
+            left: 138px;
+            width: 194px;
+            height: 28px;
+
+        }
+        .twTR:hover{
+            cursor: pointer;
+            border-radius: 15px;
+
+            background-color: rgba(190, 181, 186, 0.425);
+        }
+    </style>
+</html>

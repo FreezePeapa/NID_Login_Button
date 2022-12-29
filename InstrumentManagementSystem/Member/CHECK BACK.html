@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Instrument Management System</title>
+    <style>     
+        /*背景*/
+        #frame1{
+                position: absolute;
+                width: 100%;
+                height: 650px;
+                left: 0px;
+                top: 0px;
+                background-color: #F5C414;
+        }
+        /*背景*/
+        #frame2{
+            position: absolute;
+            width: 100%;
+            height: 102px;
+            left: 0px;
+            top: 650px;
+            background-color: #252525;
+        }
+
+        table {
+            position: absolute;
+            top: 250px;                  
+            left: 20%;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;/*字體粗細*/
+            font-size: 30px;
+            text-align: center;
+            
+            /*width: 100%;*/
+        }
+
+        tr{
+            color: #F5C414;
+            background-color: #252525;
+            text-align: center;
+            padding: 8px;
+        }
+
+        td{
+            color: #000000;
+            background-color: #faf3b8;
+            text-align: center;
+            padding: 8px;
+        }
+
+        
+        input[type="button"]:hover{
+            cursor: pointer;           
+            border-radius: 30px;
+            background-color: rgba(14, 71, 81, 0.425); 
+        } 
+        input[type="button"]{ /*RETURN*/
+            position: absolute;
+
+            background: #3A948E;
+            border: 5px solid #726E63;
+            border-radius: 30px;
+
+            color:white;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;/*字體粗細*/             
+            text-align: center;   
+        } 
+
+        .back_btn{
+            width: 200px;
+            height: 70px;
+            top: 500px;                  
+            left: 45%;
+
+            font-weight: 600;/*字體粗細*/
+            font-size: 30px;            
+        }
+        .home_btn{
+            width: 110px;
+            height: 70px;
+            top: 30px;                  
+            left: 92%;
+
+            font-size: 25px;            
+        }
+        
+   
+
+    </style>
+</head>
+<body>
+     
+    <div id="frame1">
+
+       
+        
+        <table>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>PURCHASE_DATE</th>
+              <th>MANUFACTURER</th>
+              <th>PRICE</th>
+              <th>STATUS</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Tambourine</td>
+              <td>2019/05/07</td>
+              <td>Black Swamp</td>
+              <td>12,200</td>
+              <td>In stock</td>
+            </tr>
+        </table>
+        
+        <input type ="button" value="BACK" class="back_btn" onclick="location.href='CHECK INSTRUMENT.html'"/>
+        
+        <input type ="button" value="HOME" class="home_btn" onclick="location.href='CHECK RETURN BORROW.html'"/>
+    </div>
+
+    <div id="frame2"></div>
+
+</body>
+</html>

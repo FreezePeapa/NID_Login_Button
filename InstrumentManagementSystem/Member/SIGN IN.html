@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Instrument Management System</title>
+    <style>     
+   
+        #frame1{
+            position: absolute;
+            width: 100%;
+            height: 650px;
+            left: 0px;
+            top: 0px;
+            background-color: #F5C414;
+        }
+        #frame2{
+            position: absolute;
+            width: 100%;
+            height: 102px;
+            left: 0px;
+            top: 650px;
+            background-color: #252525;
+        }
+
+        h1{ /*ACCOUNT、PASSWORD*/
+            color: #F5C414;
+            background-color: #252525;
+            border-style: ridge;
+            border-radius: 50px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 33px;
+            text-align: center;
+        } 
+
+        #title1{  /*Account*/ 
+            position: absolute; 
+            z-index: 999; /*移到最上層*/     
+            width: 210px;
+            height: 50px;
+
+            margin: 250px 495px;
+  
+        }   
+        #title2{  /*Password*/
+            position: absolute;
+            z-index: 999; /*移到最上層*/
+            width: 210px;
+            height: 50px;
+            margin: 350px 495px;
+
+            
+        }     
+
+        .btn:hover{
+            cursor: pointer;           
+            border-radius: 30px;
+            background-color: rgba(14, 71, 81, 0.425); 
+        } 
+        .btn{ /*Sign in*/
+            position: absolute;
+            width: 20%;
+            height: 92px;
+            top: 150px;                  
+            left: 40%;
+            margin: 300px auto;           
+
+            background: #3A948E;
+            border: 5px solid #726E63;
+            border-radius: 30px;
+
+            color:white;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;/*字體粗細*/
+            font-size: 30px;
+            text-align: center;  
+   
+        } 
+
+        input{
+            padding: 8px 15px;/*輸入框長寬*/
+            border: 0 none;
+            background-color: #fff;
+
+            font-weight: 600;/*字體粗細*/
+            font-size: 20px;
+            text-align: left;     
+
+            cursor: text; /*鼠標樣式*/          
+        }
+        .account{
+            position: absolute;
+            margin: 258px 300px;
+            left: 400px;
+        }
+        .password{
+            position: absolute;
+            margin: 358px 300px;
+            left: 400px;
+        }
+        
+
+    </style>
+</head>
+<body>
+     
+    <div id="frame1">
+
+        <h1 id="title1">ACCOUNT</h1>
+        <form class="account">
+            <input type="text" name="account"><!--可用placeholder="輸入文字"提醒輸入-->
+        </form>
+
+        <h1 id="title2">PASSWORD</h1>
+        <form class="password">
+            <input type="text" name="password">
+        </form>
+        <input type="button" value="SIGN IN" class="btn" />
+
+    </div>
+
+    <div id="frame2"></div>
+
+</body>
+</html>

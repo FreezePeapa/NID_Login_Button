@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TAIWAN TRAVEL</title>
+    </head>
+
+    <body>
+        <div class="bg">
+            <img src="image/banner01.jpg"alt="背景圖片">
+        </div>
+
+        <div class="backT">
+            <img src="image/taiwan_logo_white (1).svg" alt="背景台灣">
+        </div>    
+
+        <div class="searchBK">
+            
+        </div>
+
+        <button type="button" id="search">
+            search
+        </button>
+ 
+        <form>
+            <select id="local" onchange="changelocal(this.selectedIndex)"></select>
+
+            <select id="city"></select>
+        </form>
+
+        <div class="menu">
+
+            <!--<input type ="button" onclick="history.back()" value="上一頁"></input>-->      
+            <input type="button" value="旅遊情報" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="景點查詢" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="美食推薦" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="旅宿資訊" class="btn" onclick="location.href='food.html'" />
+            <input type="button" value="節慶活動" class="btn" onclick="location.href='food.html'" />
+
+            <input type="button" value="TAIWAN TRAVEL" class="twTR" onclick="location.href='index.html'" />    
+       
+        </div>
+        
+    </body>
+    
+    <style type="text/css">
+/*
+        .bg img{
+            position: fixed;
+
+            top: 0px;
+            left: 0px;
+            width: 1440px;
+
+            background: transparent linear-gradient(1deg, #1C4852C9 0%, #1C485200 100%) 0% 0% no-repeat padding-box;
+
+            z-index: -999;指定階層要在哪裡，數字越大越上層，反之則在越下層。
+        }*/
+
+        .bg {
+          position: fixed;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: -999;/*指定階層要在哪裡，數字越大越上層，反之則在越下層。*/
+        }
+        .bg img{
+            min-height: 100%;
+            width: 100%;
+        }
+
+        .backT img{
+            
+            width: 35%;
+
+            position: fixed;
+
+            top: 18%;
+            left: 32%;
+           /* bottom: 50%;
+            right: 68%;*/
+           
+            z-index: -998
+        }  
+        .btn:hover{
+            cursor: pointer;
+            
+            border-radius: 15px;
+
+            background-color: rgba(190, 181, 186, 0.425); 
+        }       
+        .btn{
+
+            color:white;
+            background-color: transparent;
+            border: none;
+
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            font-size: 14px;
+            font-weight: bold;
+
+            top: 33px;
+            left: 976px;
+            width: 76px;
+            height: 25px;
+            text-align: left;
+
+            letter-spacing: 1.26px;
+        }
+        .menu{   
+          
+            display: flex;/*宣告使用flex排版*/
+
+            height: 20px;
+            padding: 10px;
+            flex-direction: row ;
+
+            position: fixed; 
+            
+            right: 100px;
+
+        }
+
+        .twTR{
+            color:white;
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            font-size: 22px;
+
+            border: none;
+            background-color: transparent;
+
+            position: fixed; 
+            left: 100px;
+
+            top: 31px;
+            left: 138px;
+            width: 194px;
+            height: 28px;
+
+        }
+        .twTR:hover{
+            cursor: pointer;
+            border-radius: 15px;
+
+            background-color: rgba(190, 181, 186, 0.425);
+        }
+        
+        .searchBK{
+            padding: 30px 18px;
+            background-color: #fff;
+            color: rgba(0, 0, 0, 0.87);
+            -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+            border-radius: 15px; /*邊框圓角*/
+            box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+            overflow: hidden;
+            box-sizing: inherit;
+
+            position: absolute;
+            top: 68%;
+            left: 25%;
+            bottom: 18%;
+            right: 25%;
+        }
+
+        #search{
+            opacity: 1;
+            background-color: #E8CB89; 
+            border: none;/*邊框*/
+            /*min-width: 142px;*/
+            height: 50px;
+
+            color: #FFF;
+            font-size: 16px;
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.75;
+            text-transform: uppercase;/*都是大寫*/
+            padding: 6px 16px;
+            border-radius: 15px;
+
+            position: fixed;
+            /*absolute：絕對位置，當網頁往下拉時，元素也會跟著改變位置，其元素的位置由 top、left、right、bottom 所決定。
+                fixed：元素位置固定，相對於瀏覽器而定位，其元素的位置由 top、left、right、bottom 所決定。*/
+            top: 72%;
+            left: 64%;
+            width: 10%;
+        }
+        #search:hover{ /*游標經過後*/
+            opacity: 0.6;/*淡入*/
+            /*background-color: #c0ae85;*/
+            cursor: pointer;/*游標圖樣*/
+        }
+
+        #local{
+            
+            display: flex;
+            
+            background-color: #ebebeb;
+            
+            border: none;
+            border-radius: 15px;
+            width: 100%;
+            padding: 16.5px 14px;
+
+            font-weight: bold;/*文字粗細*/
+            font-size: 16px;
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            color: rgb(112, 112, 112);
+
+            position: fixed;
+            top: 72%;
+            left: 26%;
+
+            width: 18%;
+
+
+        }
+        #local:hover{
+            cursor: pointer;/*游標圖樣*/
+        }
+        #local option{
+            background-color: white;
+            border-radius: 15px;
+
+            font-weight: bold;/*文字粗細*/
+        }
+
+        #city{
+            
+
+            background-color: #ebebeb;
+            
+            border: none;
+            border-radius: 15px;
+            width: 100%;
+            padding: 16.5px 14px;
+
+            font-weight: bold;/*文字粗細*/
+            font-size: 16px;
+            font-family: 'EB Garamond','PingFang TC','Noto Sans TC','Roboto','sans-serif';
+            color: rgb(112, 112, 112);
+
+            position: fixed;
+            top: 72%;
+            left: 45%;
+
+            width: 18%;
+
+        }
+        #city:hover{
+            cursor: pointer;/*游標圖樣*/
+        }
+        #city option{
+            background-color: white;
+            border-radius: 15px;
+
+            font-weight: bold;/*文字粗細*/
+        }
+
+    </style>
+</html>
+
+<script type="text/javascript">
+    var locals=['北部地區','中部地區','南部地區','東部地區','離島地區'];
+    var localSelect=document.getElementById("local");
+    var inner="";
+    for(var i=0;i<locals.length;i++){
+        inner=inner+'<option value=i>'+locals[i]+'</option>';
+    }
+    localSelect.innerHTML=inner;
+    
+    
+    var city=new Array();
+    city[0]=['臺北市','新北市','基隆市','桃園市','新竹市' ,' 新竹縣 '];
+    city[1]=['臺中市','苗栗縣','南投縣','彰化縣','雲林縣'];	
+    city[2]=['高雄市','台南市','嘉義市','嘉義縣','屏東縣'];	
+    city[3]=['宜蘭縣','花蓮縣','台東縣'];
+    city[4]=['澎湖縣','金門縣','連江縣'];
+
+    function changelocal(index){
+        var Sinner="";
+        for(var i=0;i<city[index].length;i++){
+            Sinner=Sinner+'<option value=i>'+city[index][i]+'</option>';
+        }
+        var citySelect=document.getElementById("city");
+        citySelect.innerHTML=Sinner;
+    }
+    changelocal(document.getElementById("local").selectedIndex);
+</script>
